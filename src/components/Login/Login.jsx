@@ -16,12 +16,10 @@ function Login() {
         // Handle email submission
     };
     const handleManualLoginClick = () => {
-        navigate('/dashboard'); // Navigate to the desired path
+        navigate('/dashboard');
     };
 
     return (
-
-
         <div className="login-page">
             <div className="header">
                 <img src="/path-to-your-clockify-logo.png" alt="Clockify" className="logo" />
