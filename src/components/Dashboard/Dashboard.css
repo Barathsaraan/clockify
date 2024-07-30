@@ -57,7 +57,7 @@
 }
 
 .sidebar ul li:hover, .sidebar ul li.active {
-    background-color: #007bff;
+    background-color: gray;
     color: white;
 }
 
@@ -68,8 +68,8 @@
     padding: 10px 15px;
 }
 .sidebar ul li:hover {
-    background-color: #007bff;
-    color: white;
+    background-color: gray;
+    color: blacks;
 }
 
 .sidebar ul li a {

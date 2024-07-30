@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import CalenderPage from '../CalenderPage/CalenderPage';
 import ClientPage from '../ClientPage/ClientPage';
+import DashboardProject from '../DashboardProject/DashboardProject';
 import Timesheet from '../Timesheet/TimeSheet';
 import TimeTracker from '../TimeTracker/TimeTracker';
 import './Dashboard.css';
@@ -60,18 +61,19 @@ const Dashboard = () => {
                 <nav className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
                     <button onClick={toggleSidebar}>Toggle</button>
                     <ul>
-
                         <li className={activeView === 'timeTracker' ? 'active' : ''}>
                             <a href="#" onClick={() => setActiveView('timeTracker')}>TIME TRACKER</a>
                         </li>
                         <li className={activeView === 'timesheet' ? 'active' : ''}>
                             <a href="#" onClick={() => setActiveView('timesheet')}>TIMESHEET</a>
                         </li>
-                        <li className={activeView === 'Calender' ? 'active' : ''}>
+                        {/* <li className={activeView === 'Calender' ? 'active' : ''}>
                             <a href="#" onClick={() => setActiveView('calender')}>CALENDAR</a>
+                        </li> */}
+                        <li className={activeView === 'Dashboardproject' ? 'active' : ''}>
+                            <a href="#" onClick={() => setActiveView('Dashboardproject')}>DASHBOARD</a>
                         </li>
 
-                        <li><a href="#">DASHBOARD</a></li>
                         <li><a href="#">REPORTS</a></li>
                         <li><a href="#">TAGS</a></li>
                         <li><a href="#">PROJECTS</a></li>
@@ -92,9 +94,9 @@ const Dashboard = () => {
                     ) : (
                         activeView === 'client' ? (
                             <ClientPage />
-                        ): (
-                            <Timesheet />
-                        )
+                        ) : activeView === 'Dashboardproject' ? (
+                            <DashboardProject />
+                        ) : null
                     )}
 
 
