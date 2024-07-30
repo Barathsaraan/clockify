@@ -50,35 +50,33 @@ const DashboardProject = () => {
         </div>
       </header>
       <div className="dashboard-content">
-        <div className="dashboard-main">
-          <div className="dashboard-summary">
-            <div className="summary-item">
-              <h3>Total time</h3>
-              <p className="large-text">00:00:00</p>
-            </div>
-            <div className="summary-item">
-              <h3>Top project</h3>
-              <p className="large-text">--</p>
-            </div>
-            <div className="summary-item">
-              <h3>Top client</h3>
-              <p className="large-text">--</p>
-            </div>
+        <div className="dashboard-summary">
+          <div className="summary-item">
+            <h3>Total time</h3>
+            <p className="large-text">00:00:00</p>
           </div>
+          <div className="summary-item">
+            <h3>Top project</h3>
+            <p className="large-text">--</p>
+          </div>
+          <div className="summary-item">
+            <h3>Top client</h3>
+            <p className="large-text">--</p>
+          </div>
+        </div>
+        <div className="dashboard-main">
           <div className="dashboard-chart">
             <Bar data={chartData} options={chartOptions} />
           </div>
-          <div className="dashboard-table-container">
-            <table className="dashboard-table">
-              <tbody>
-                <tr>
-                  <td>No project</td>
-                  <td>00:00:00</td>
-                  <td>0.00%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <table className="dashboard-table">
+            <tbody>
+              <tr>
+                <td>No project</td>
+                <td>00:00:00</td>
+                <td>0.00%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div className="dashboard-sidebar">
           <div className="dashboard-activities">

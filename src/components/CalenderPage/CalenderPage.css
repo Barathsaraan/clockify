@@ -1,0 +1,213 @@
+.calendar-container {
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .view-selector button, .calendar-controls button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .view-selector button.active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .calendar-grid {
+    display: flex;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .time-column, .day-column {
+    /* flex: 1; */
+    min-width: 100px;
+  }
+  
+  .time-slot, .event-slot {
+    height: 60px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 5px;
+  }
+  
+  .day-header {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f8f8;
+  }
+  
+  .time-column {
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .day-column {
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .day-column:last-child {
+    border-right: none;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .plus-icon {
+    font-weight: bold;
+  }
+  
+  .settings-icon {
+    font-size: 16px;
+  }
+  
+  .teammates-dropdown {
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .today-button {
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    background-color: white;
+    color: #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .calendar-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .calendar-controls > * {
+    margin-left: 10px;
+  }
+  
+  .zoom-controls {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+  
+  .zoom-controls button {
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  /* .day-view .day-column {
+    flex: 1;
+  }
+   */
+  .day-view .day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+    height: 40px; /* Adjust as needed */
+  }
+  
+  .day-view .day-date {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .day-view .day-time {
+    color: #666;
+  }
+  
+  .day-view .time-slot,
+  .day-view .event-slot {
+    height: 60px;
+  }
+  
+  .day-view .time-slot.header {
+    height: 40px; /* Match the day-header height */
+  }
+  
+  .calendar-grid {
+    display: flex;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+  }
+  
+  .time-column {
+    width: 60px; /* Adjust as needed */
+    flex-shrink: 0;
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .day-column {
+    flex-grow: 1;
+  }
+  
+  .time-slot, .event-slot {
+    height: 43px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 5px;
+  }
+  
+  .time-slot {
+    text-align: right;
+    padding-right: 10px;
+    color: #666;
+    font-size: 12px;
+  }
+  .zoom-controls {
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    left: 10px;
+    display: flex; /* Change to flex */
+    flex-direction: row; /* Ensure horizontal layout */
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .zoom-controls button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0; /* Remove padding */
+  }
+  
+  .zoom-controls button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .zoom-controls button:first-child {
+    border-right: 1px solid #e0e0e0; /* Change border to right */
+  }

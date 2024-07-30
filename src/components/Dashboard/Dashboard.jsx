@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import CalenderPage from '../CalenderPage/CalenderPage';
 import ClientPage from '../ClientPage/ClientPage';
 import DashboardProject from '../DashboardProject/DashboardProject';
+import ReportPage from '../ReportPage/ReportPage';
 import Timesheet from '../Timesheet/TimeSheet';
 import TimeTracker from '../TimeTracker/TimeTracker';
 import './Dashboard.css';
@@ -67,14 +68,16 @@ const Dashboard = () => {
                         <li className={activeView === 'timesheet' ? 'active' : ''}>
                             <a href="#" onClick={() => setActiveView('timesheet')}>TIMESHEET</a>
                         </li>
-                        {/* <li className={activeView === 'Calender' ? 'active' : ''}>
+
+                        <li className={activeView === 'calender' ? 'active' : ''}>
                             <a href="#" onClick={() => setActiveView('calender')}>CALENDAR</a>
-                        </li> */}
+                        </li>
                         <li className={activeView === 'Dashboardproject' ? 'active' : ''}>
                             <a href="#" onClick={() => setActiveView('Dashboardproject')}>DASHBOARD</a>
                         </li>
-
-                        <li><a href="#">REPORTS</a></li>
+                        <li className={activeView === 'Reports' ? 'active' : ''}>
+                            <a href="#" onClick={() => setActiveView('Reports')}>REPORTS</a>
+                        </li>
                         <li><a href="#">TAGS</a></li>
                         <li><a href="#">PROJECTS</a></li>
                         <li><a href="#">TEAM</a></li>
@@ -96,6 +99,8 @@ const Dashboard = () => {
                             <ClientPage />
                         ) : activeView === 'Dashboardproject' ? (
                             <DashboardProject />
+                        ) : activeView === 'Reports' ? (
+                            <ReportPage />
                         ) : null
                     )}
 
