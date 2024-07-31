@@ -12,7 +12,7 @@ const TeamPage = () => {
 
   return (
     <div className="team-page">
-      <h2>Team</h2>
+      <h1>Team</h1>
       
       <div className="tabs">
         <button 
@@ -92,6 +92,15 @@ const TeamPage = () => {
 
       {activeTab === 'GROUPS' && (
         <div className="groups-section">
+          <div className="add-group">
+            <input 
+              type="text" 
+              placeholder="Add new group"
+              value={newGroupName}
+              onChange={(e) => setNewGroupName(e.target.value)}
+            />
+            <button className="add-btn">ADD</button>
+          </div>
           <div className="groups-table">
             <div className="table-header">
               <span>Groups</span>
@@ -109,15 +118,6 @@ const TeamPage = () => {
               </tbody>
             </table>
           </div>
-          <div className="add-group">
-            <input 
-              type="text" 
-              placeholder="Add new group"
-              value={newGroupName}
-              onChange={(e) => setNewGroupName(e.target.value)}
-            />
-            <button className="add-btn">ADD</button>
-          </div>
         </div>
       )}
 
@@ -129,7 +129,9 @@ const TeamPage = () => {
           </div>
           <div className="add-reminder">
             <span>If </span>
-            <span className="select-members">(select team members)</span>
+            <select>
+              <option>(select team members)</option>
+            </select>
             <span> tracked Less than </span>
             <input type="number" defaultValue={8} />
             <span> hours per Week, send Them a reminder </span>
