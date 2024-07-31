@@ -3,7 +3,10 @@ import React, { useEffect, useState } from 'react';
 import CalenderPage from '../CalenderPage/CalenderPage';
 import ClientPage from '../ClientPage/ClientPage';
 import DashboardProject from '../DashboardProject/DashboardProject';
+import ProjectPage from '../ProjectPage/ProjectPage';
 import ReportPage from '../ReportPage/ReportPage';
+import TagsPage from '../TagsPage/TagsPage';
+import TeamPage from '../TeamPage/TeamPage';
 import Timesheet from '../Timesheet/TimeSheet';
 import TimeTracker from '../TimeTracker/TimeTracker';
 import './Dashboard.css';
@@ -78,9 +81,15 @@ const Dashboard = () => {
                         <li className={activeView === 'Reports' ? 'active' : ''}>
                             <a href="#" onClick={() => setActiveView('Reports')}>REPORTS</a>
                         </li>
-                        <li><a href="#">TAGS</a></li>
-                        <li><a href="#">PROJECTS</a></li>
-                        <li><a href="#">TEAM</a></li>
+                        <li className={activeView === 'Tags' ? 'active' : ''}>
+                            <a href="#" onClick={() => setActiveView('Tags')}>TAGS</a>
+                        </li>
+                        <li className={activeView === 'Projects' ? 'active' : ''}>
+                            <a href="#" onClick={() => setActiveView('Projects')}>PROJECTS</a>
+                        </li>
+                        <li className={activeView === 'Team' ? 'active' : ''}>
+                            <a href="#" onClick={() => setActiveView('Team')}>TEAM</a>
+                        </li>
                         <li className={activeView === 'client' ? 'active' : ''}>
                             <a href="#" onClick={() => setActiveView('client')}>CLIENTS</a>
                         </li>
@@ -101,7 +110,19 @@ const Dashboard = () => {
                             <DashboardProject />
                         ) : activeView === 'Reports' ? (
                             <ReportPage />
-                        ) : null
+                        ) : activeView === 'Tags' ? (
+                            <TagsPage />
+                        ) : (
+                            activeView === 'Team' ? (
+                                <TeamPage />
+                            ) : (
+                                activeView === 'Projects' ? (
+                                    <ProjectPage />
+                                ) : (
+                                    <Dashboard />
+                                )
+                            )
+                        )
                     )}
 
 

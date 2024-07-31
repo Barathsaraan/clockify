@@ -1,0 +1,164 @@
+.team-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f5f7f9;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+  
+  .tabs {
+    margin-bottom: 20px;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tabs button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    color: #888;
+  }
+  
+  .tabs button.active {
+    color: #00a8ff;
+    border-bottom: 2px solid #00a8ff;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar select,
+  .search-bar input,
+  .add-group input,
+  .add-reminder input[type="number"] {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .search-bar input {
+    flex-grow: 1;
+  }
+  
+  .add-member-btn, .add-btn, .upgrade-btn {
+    background-color: #00a8ff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .members-table, .groups-table, .reminders-table {
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .export-btn {
+    background: none;
+    border: none;
+    color: #00a8ff;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  th {
+    color: #888;
+    font-weight: normal;
+  }
+  
+  .change-btn, .group-btn {
+    background: none;
+    border: none;
+    color: #00a8ff;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .role-tag {
+    background-color: #00a8ff;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
+  
+  .more-options-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .reminder-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6f7ff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .standard-feature {
+    color: #00a8ff;
+  }
+  
+  .add-reminder {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-reminder span {
+    margin: 0 5px;
+  }
+  
+  .add-reminder input[type="number"] {
+    width: 50px;
+  }
+  
+  .select-members {
+    color: #00a8ff;
+    cursor: pointer;
+  }
+  
+  .groups-section .add-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .groups-section .add-group input {
+    margin-right: 10px;
+  }
